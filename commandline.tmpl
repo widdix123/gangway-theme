@@ -20,7 +20,7 @@
 </head>
     <body>
         <nav class="light-blue blue" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">KubeConfigDownloader</a>
+            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">gangway</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="/logout">Logout</a></li>
             </ul>
@@ -55,7 +55,7 @@ $ sudo mv ./kubectl /usr/local/bin/kubectl
             </div>
             <pre>
                <code class="language-bash">
-echo "asdfasdf" \ > "ca-{{ .ClusterName }}.pem"
+echo "{{ .ClusterCA }}" \ > "ca-{{ .ClusterName }}.pem"
 kubectl config set-cluster "{{ .ClusterName }}" --server={{ .APIServerURL }} --certificate-authority="ca-{{ .ClusterName }}.pem" --embed-certs
 kubectl config set-credentials "{{ .KubeCfgUser }}"  \
     --auth-provider=oidc  \
