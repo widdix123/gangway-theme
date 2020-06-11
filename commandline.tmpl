@@ -114,7 +114,7 @@ PfZ+G6Z6h7mjem0Y+iWlkYcV4PIWL1iwBi8saCbGS5jN2p8M+X+Q7UNKEkROb3N6
 KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
 -----END CERTIFICATE-----" \ > "ca-{{ .ClusterName }}.pem"
 kubectl config set-cluster "{{ .ClusterName }}" --server={{ .APIServerURL }} --certificate-authority="ca-{{ .ClusterName }}.pem" --embed-certs
-kubectl config set-credentials "{{ .KubeCfgUser }}"  \
+kubectl config set-credentials "{{ .Username }}"  \
     --auth-provider=oidc  \
     --auth-provider-arg='idp-issuer-url={{ .IssuerURL }}'  \
     --auth-provider-arg='client-id={{ .ClientID }}'  \
