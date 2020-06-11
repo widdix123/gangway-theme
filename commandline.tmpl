@@ -55,37 +55,7 @@ $ sudo mv ./kubectl /usr/local/bin/kubectl
             </div>
             <pre>
                <code class="language-bash">
-echo '-----BEGIN CERTIFICATE-----
-MIIFYTCCBEmgAwIBAgISBJzeLcWiOejAPC8ctYtOr7kBMA0GCSqGSIb3DQEBCwUA
-MEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQD
-ExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0yMDA2MDIxMTIyMDNaFw0y
-MDA4MzExMTIyMDNaMCAxHjAcBgNVBAMTFWRleC52NC5mcGNvbXBsZXRlLmNvbTCC
-ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANcG4cyJJUjVGwm0UhYMsX0e
-vG4wcKv8V8n4Ikishti6p8IUCKR+ULZieUt2I0jut8ZLxjV4eriwcPqEV8XHLL0k
-fM+FfkTCA9XuHmkcKhGEeStV3w8/ifInohdCFnuvex93wVnvuWaBT7P92RDgwLT6
-Ape5UkiK9e1febGT0P5m62n7BwX08iY2VyVnUyZTIZVWnvpUt1fQ5cJuUJtbnIp4
-j8Dm/YF1fTRMTxLXt9QLGdolmAlo/Jb8kZe+bb62uhOEPYM9y3ac1GBSuVLBrv4p
-x+XYRXZBKbkOZx7RE0dWWGWOXFmZ7npsPtXXKGZwbv78ocHsaTQlz0gQ/KRgpuEC
-AwEAAaOCAmkwggJlMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcD
-AQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUnZUh1FdO683UVMOU
-VwLBVs9F4GgwHwYDVR0jBBgwFoAUqEpqYwR93brm0Tm3pkVl7/Oo7KEwbwYIKwYB
-BQUHAQEEYzBhMC4GCCsGAQUFBzABhiJodHRwOi8vb2NzcC5pbnQteDMubGV0c2Vu
-Y3J5cHQub3JnMC8GCCsGAQUFBzAChiNodHRwOi8vY2VydC5pbnQteDMubGV0c2Vu
-Y3J5cHQub3JnLzAgBgNVHREEGTAXghVkZXgudjQuZnBjb21wbGV0ZS5jb20wTAYD
-VR0gBEUwQzAIBgZngQwBAgEwNwYLKwYBBAGC3xMBAQEwKDAmBggrBgEFBQcCARYa
-aHR0cDovL2Nwcy5sZXRzZW5jcnlwdC5vcmcwggEDBgorBgEEAdZ5AgQCBIH0BIHx
-AO8AdgDnEvKwN34aYvuOyQxhhPHqezfLVh0RJlvz4PNL8kFUbgAAAXJ0+0U6AAAE
-AwBHMEUCIQCcc8YFdTOOEazsXerFggv+DepFAAm/5ZNuGU9u4RuTowIgC+Xt76Q0
-x5ok5BTf0toUHpXvF6Wr5efg8S9aQaIAX24AdQCyHgXMi6LNiiBOh2b5K7mKJSBn
-a9r6cOeySVMt74uQXgAAAXJ0+0VpAAAEAwBGMEQCIEMaSYbSm/KsNrkl/hl+dtyX
-BjOIRHHAEykrYi8eJf1GAiBQRoQM/iXXNrT2i8eCahyHTK5K5BcHmMwKV9KTjNSI
-fzANBgkqhkiG9w0BAQsFAAOCAQEAdWpDshW/3wSgx9bv/spusrlS1nsH8uR9bgCk
-a0Sx+sDsJWgS4H40DsUJ4jQqmFw3lMVz93gpFyfvye2p+8xUoyLWKsunT1J/PU97
-pymSh6ZwXTCLrrIXj/pGqd/z2GJcwjS8ffwR5oCVhGFCIocICh60jyCZS655qi2F
-XgtL+arcz/ZNZv9eYbPjU9w82D2Cm3jQnkWe5DyvGzmck6tOuZZzKxB9SGZI4KWB
-FVKhlFCAsZWpX50S2lQnBGXONJWNBNxs+4Mtj20aJ72K9fQNDWl8ySf22/Oc6MDV
-KL3EL/uibH0Hmup2UDdmwsbOLJCQAH629WPGzEvFoRyVX8hGYg==
------END CERTIFICATE-----' \ > "ca-{{ .ClusterName }}.pem"
+echo "asdfasdf" \ > "ca-{{ .ClusterName }}.pem"
 kubectl config set-cluster "{{ .ClusterName }}" --server={{ .APIServerURL }} --certificate-authority="ca-{{ .ClusterName }}.pem" --embed-certs
 kubectl config set-credentials "{{ .KubeCfgUser }}"  \
     --auth-provider=oidc  \
