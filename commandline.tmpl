@@ -55,7 +55,7 @@ $ sudo mv ./kubectl /usr/local/bin/kubectl
             </div>
             <pre>
                <code class="language-bash">
-echo "-----BEGIN CERTIFICATE-----
+echo '-----BEGIN CERTIFICATE-----
 MIIFYTCCBEmgAwIBAgISBJzeLcWiOejAPC8ctYtOr7kBMA0GCSqGSIb3DQEBCwUA
 MEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQD
 ExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0yMDA2MDIxMTIyMDNaFw0y
@@ -85,7 +85,7 @@ pymSh6ZwXTCLrrIXj/pGqd/z2GJcwjS8ffwR5oCVhGFCIocICh60jyCZS655qi2F
 XgtL+arcz/ZNZv9eYbPjU9w82D2Cm3jQnkWe5DyvGzmck6tOuZZzKxB9SGZI4KWB
 FVKhlFCAsZWpX50S2lQnBGXONJWNBNxs+4Mtj20aJ72K9fQNDWl8ySf22/Oc6MDV
 KL3EL/uibH0Hmup2UDdmwsbOLJCQAH629WPGzEvFoRyVX8hGYg==
------END CERTIFICATE-----" \ > "ca-{{ .ClusterName }}.pem"
+-----END CERTIFICATE-----' \ > "ca-{{ .ClusterName }}.pem"
 kubectl config set-cluster "{{ .ClusterName }}" --server={{ .APIServerURL }} --certificate-authority="ca-{{ .ClusterName }}.pem" --embed-certs
 kubectl config set-credentials "{{ .KubeCfgUser }}"  \
     --auth-provider=oidc  \
