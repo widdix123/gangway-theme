@@ -121,7 +121,7 @@ kubectl config set-credentials "{{ .Username }}"  \
     --auth-provider-arg='client-secret={{ .ClientSecret }}' \
     --auth-provider-arg='refresh-token={{ .RefreshToken }}' \
     --auth-provider-arg='id-token={{ .IDToken }}'
-kubectl config set-context "{{ .ClusterName }}" --cluster="{{ .ClusterName }}" --user="{{ .KubeCfgUser }}"
+kubectl config set-context "{{ .ClusterName }}" --cluster="{{ .ClusterName }}" --user="{{ .Username }}"
 kubectl config use-context "{{ .ClusterName }}"
 rm "ca-{{ .ClusterName }}.pem"
               </code>
