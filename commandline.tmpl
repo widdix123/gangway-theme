@@ -56,8 +56,7 @@ $ sudo mv ./kubectl /usr/local/bin/kubectl
             <pre>
                <code class="language-bash">
 export KUBECONFIG=./{{ .ClusterName }}.kubeconfig
-cat "/cacerts/tls.crt" >"ca-{{ .ClusterName }}.pem" |tee
-#echo "-----BEGIN CERTIFICATE-----
+echo "-----BEGIN CERTIFICATE-----
 MIIFYTCCBEmgAwIBAgISBJzeLcWiOejAPC8ctYtOr7kBMA0GCSqGSIb3DQEBCwUA
 MEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQD
 ExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0yMDA2MDIxMTIyMDNaFw0y
